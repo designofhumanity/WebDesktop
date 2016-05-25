@@ -1,9 +1,9 @@
-## WebDesktop说明
-2011年作品，基于网上流传的源码修改，采用JavaScript+Css+Html实现webos的效果，已不再维护
+## WebDesktop Explanation
+2011 In his works , circulated on the Internet based on modified source code , the use ofJavaScript+Css+HtmlWebos achieve the effect , no longer maintain
 
-## 截图
+## Screenshots
 
 ![webdesktop](https://github.com/Beau-zihan/WebDesktop/blob/master/webdesktop-preview.png)
 
-## 示例
+## Example
 http://www.zi-han.net/win

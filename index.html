@@ -27,7 +27,7 @@ Because in HTML just <meta Charset="utf-8"> -->
                         <!-- EXTERNAL LINK!  -->
 
         </ul>
-        <span class="mbot"><a href="javascript:void(0);">Collapse</a></span>
+        <span class="mbot"><a href="javascript:void(0);">Hide</a></span>
     </div>
     <div id="start-menu">
         <ul class="start-menu">
@@ -42,34 +42,10 @@ Because in HTML just <meta Charset="utf-8"> -->
     <noscript><div class="noscript-warning">Your browser has Javascript disabled script, then turn on Javascript functions continue to visit! !</div></noscript>
     <script type="text/javascript" src="js/jquery-1.6.2.min.js"></script>
     <script type="text/javascript" src="js/jquery.tool.js"></script>
-    <script type="text/javascript">
-// what call this function?
-        function  GetQueryString(name){
-            var reg=new   RegExp("(^|&)"+ name +"=([^&]*)(&|$)");
-            var r=window.location.search.substr(1).match(reg);
-            if(r!=null) return unescape(r[2]);return null;
-        }
-        //alert(GetQueryString("menu"));
-        if (GetQueryString("menu")==null){
-          // dynamically script inserting
-            document.write( "<scri"+"pt type=text/javascript src=js/shortcut1.js>"+"</scr"+"ipt>" );
-        }
-        else{
-          // dynamically script inserting
-            document.write( "<scri"+"pt type=text/javascript src=js/shortcut"+GetQueryString("menu")+".js>"+"</scr"+"ipt>" );
-        }
-        // so first script is core.js
-        document.write( "<scri"+"pt type=text/javascript src=js/core.js>"+"</scr"+"ipt>" );
-
-
-
-    </script>
+    <script type="text/javascript" src="js/getquerystring.js"></script>
+    <script src="js/core.js" charset="utf-8"></script>
     <script type="text/javascript" src="js/templates.js"></script>
     <script type="text/javascript" src="js/jquery-smartMenu.js"></script>
-    <!--[if lte IE 6]>
-       <div id="ie6-warning">You are using Internet Explorer 6, there may be differences in the display of this page. We recommend that you upgrade to<a href="http://www.microsoft.com/china/windows/internet-explorer/" target="_blank">Internet Explorer 8</a> 或以下浏览器： <a href="http://ie.sogou.com/">搜狗</a> | <a href="http://www.google.com/chrome/?hl=zh-CN">Chrome</a> | <a href="http://chrome.360.cn/">360</a> | <a href="http://firefox.com.cn/">火狐</a></div>
-       <script type="text/javascript" src="js/forie6.js"></script>
-     <![endif]-->
     <!-- Baidu Button BEGIN -->
     <div id="bdshare" class="bdshare_t bds_tools get-codes-bdshare">
         <a class="bds_tsina"></a>
@@ -80,10 +56,6 @@ Because in HTML just <meta Charset="utf-8"> -->
     </div>
     <script type="text/javascript" id="bdshare_js" data="type=tools&amp;mini=1" ></script>
     <script type="text/javascript" id="bdshell_js"></script>
-    <script type="text/javascript">
-    // external script???? what it do?
-        document.getElementById("bdshell_js").src = "js/shell_v2.js?t=" + new Date().getHours();
-    </script>
     <!-- Baidu Button END  EXTERNAL script-->
 <script type="text/javascript" src="js/stats.js?sId=9051096" charset="UTF-8"></script>
 </body>

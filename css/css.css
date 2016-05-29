@@ -1,3 +1,4 @@
+/*browser rest i thing------*/
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +14,7 @@ a {
     color: #ccc;
     outline: none
 }
+/*end of browser reset*/
 a:hover {
     text-decoration: underline;
     color: #1298F4
@@ -40,22 +42,6 @@ body {
     left: 0;
     width: 100%;
     height: 100%
-}
-.ie-noscript-warning {
-    position: absolute;
-    left: 50%;
-    top: 50%
-}
-.ie-noscript-warning div {
-    position: relative;
-    left: -210px;
-    top: -110px;
-    width: 384px;
-    height: 171px;
-    background: url(ienoscript.gif) red no-repeat;
-    opacity: 0.7;
-    filter: alpha(opacity=70);
-    padding: 10px 15px
 }
 #task-bar {
     position: absolute;
@@ -668,20 +654,6 @@ body {
     line-height: 100px;
     text-align: center;
     color: #c00;
-}
-#ie6-warning {
-    background: rgb(255, 255, 225) no-repeat scroll 8px center;
-    text-align: center;
-    position: absolute;
-    margin: 0 auto;
-    color: #000;
-    width: 100%;
-    line-height: 30px;
-    z-index: 99;
-    border-bottom: solid 1px #000;
-}
-#ie6-warning a {
-    color: #f60;
 }
 #bdshare {
     position: absolute;

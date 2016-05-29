@@ -1,14 +1,14 @@
 ;
 // wtf minified file ... original?
 (function(global) {
-    global.Ta = global.Ta || {};
-    Ta.hack = function() {
+    global.Ta = global.Ta || {}; //default empty object to Ta variable (property)
+    Ta.hack = function() { //object ta containt method that return object
         return {
             params: '',
             conf: {
-                sid: 9051096,
-                pf: 1,
-                logo: 255,
+                sid: 9051096, //wtf?
+                pf: 1, //wtf?
+                logo: 255, //wtf?
                 hot: {
                     "url": "www.zi-han.net|www.zi-han.net/theme/ifanr/|www.zi-han.net/theme/ifanr/contact.html|www.zi-han.net/theme/ifanr/help.html|www.zi-han.net/theme/ifanr/history.html|www.zi-han.net/theme/ifanr/intro.html|www.zi-han.net/themes/919.html",
                     "isValid": true

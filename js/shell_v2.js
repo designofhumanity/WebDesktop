@@ -1,7 +1,7 @@
 var bdShare = bdShare || {
     version: "1.0" //default object and default property
 };
-bdShare.ready = bdShare.ready || function(B, C) {
+bdShare.ready = bdShare.ready || function(B, localDocument) {
    localDocument=localDocument|| document;
     if (/complete/.test(localDocument.readyState)) {
         B()
@@ -34,7 +34,7 @@ bdShare.ready = bdShare.ready || function(B, C) {
 };
 bdShare.loadScript = bdShare.loadScript || function(B) {
     var createdScript = document.createElement("script");
-    created.src = B;//B it is source of script
+    createdScript.src = B;//B it is source of script
     bdShare.ready(function() {
         document.getElementsByTagName("script")[0].parentNode.appendChild(A)
     })
@@ -46,8 +46,7 @@ if (bdShare.fn && bdShare.fn.init) {
         start: +new Date
     };
     if (!bdShare.ApiPVLogger) {
-      // External script? WTF&
-        bdShare.loadScript("http://bdimg.share.baidu.com/static/js/logger.js?cdnversion=" + Math.ceil(new Date() / 3600000))
+        bdShare.loadScript("js/logger.js?cdnversion=" + Math.ceil(new Date() / 3600000))
     }
     // External script? WTF
     document.getElementById("bdshare_js").src = "http://bdimg.share.baidu.com/static/js/bds_s_v2.js?cdnversion=" + Math.ceil(new Date() / 3600000)

@@ -1,16 +1,16 @@
 var bdShare = bdShare || {
-    version: "1.0"
+    version: "1.0" //default object and default property
 };
 bdShare.ready = bdShare.ready || function(B, C) {
-    C = C || document;
-    if (/complete/.test(C.readyState)) {
+   localDocument=localDocument|| document;
+    if (/complete/.test(localDocument.readyState)) {
         B()
     } else {
-        if (C.addEventListener) {
-            if ("interactive" == C.readyState) {
+        if (localDocument.addEventListener) {
+            if ("interactive" == localDocument.readyState) {
                 B()
             } else {
-                C.addEventListener("DOMContentLoaded", B, false)
+                localDocument.addEventListener("DOMContentLoaded", B, false)
             }
         } else {
             var A = function() {
@@ -20,21 +20,21 @@ bdShare.ready = bdShare.ready || function(B, C) {
             void
             function() {
                 try {
-                    C.body.doScroll("left")
+                    localDocument.body.doScroll("left")
                 } catch (D) {
                     return setTimeout(arguments.callee, 10)
                 }
                 A()
             }();
-            C.attachEvent("onreadystatechange", function() {
-                ("complete" == C.readyState) && A()
+            localDocument.attachEvent("onreadystatechange", function() {
+                ("complete" == localDocument.readyState) && A()
             })
         }
     }
 };
 bdShare.loadScript = bdShare.loadScript || function(B) {
-    var A = document.createElement("script");
-    A.src = B;
+    var createdScript = document.createElement("script");
+    created.src = B;//B it is source of script
     bdShare.ready(function() {
         document.getElementsByTagName("script")[0].parentNode.appendChild(A)
     })
@@ -46,10 +46,13 @@ if (bdShare.fn && bdShare.fn.init) {
         start: +new Date
     };
     if (!bdShare.ApiPVLogger) {
+      // External script? WTF&
         bdShare.loadScript("http://bdimg.share.baidu.com/static/js/logger.js?cdnversion=" + Math.ceil(new Date() / 3600000))
     }
+    // External script? WTF
     document.getElementById("bdshare_js").src = "http://bdimg.share.baidu.com/static/js/bds_s_v2.js?cdnversion=" + Math.ceil(new Date() / 3600000)
 }
+//  WTF
 if (+[1, ]) {
     var shell = document.getElementById("bdshell_js");
     shell && shell.parentNode.removeChild(shell)
